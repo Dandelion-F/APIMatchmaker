@@ -1,24 +1,24 @@
 # APIMatchmak
 
-## Running steps
+## 运行步骤
 
-1. Use getSDKVersion.py to get the SDK Version (including the min SDK version and target SDK version) of each app.
+1. 使用 getSDKVersion.py 获取每个应用的 SDK 版本，包括最低版本（minSdkVersion）和目标版本（targetSdkVersion）。
 
-2. Use PresolvedCSVFilter.py to solve the descriptions.
+2. 使用 PresolvedCSVFilter.py 处理应用描述。
 
-3. Use lib/APIExtractor.jar to extract the method declarations and method invocations of each app.
+3. 使用 lib/APIExtractor.jar 提取每个应用的方法声明和 API 调用。
 
-4. Use the DatasetGenerator.py to generate the datasets for evaluation.
+4. 使用 DatasetGenerator.py 生成数据集的评估结果。
 
-5. Run main.py to start. The arguments are detailed in the *getOptions()* function of main.py.
+5. 运行 main.py 启动程序。其中的 **getOptions()** 函数有对参数进行详细说明。
     
 
-## The code structure
+## 代码结构
 
-1. The *lib* folder contains a tool developed to extract the methods and APIs from the APK files.
+1. **lib** 目录包含了一个从 APK 文件提取方法和 API 的工具实现。
 
-2. The *Dataset* folder contains a file that points to the url of the openly available dataset.
+2. **Dataset** 目录提供了可访问该数据集的链接地址。
 
-3. The *Helper* folder contains some basic functions, such as the crawler we used to collect the descriptions.
+3. **Helper** 目录包含了一些基本功能实现，例如，收集应用描述的爬虫程序。
 
-4. The *Main* folder contains the contains the most core code, including the implementation of our approach.
+4. **Main** 目录包含了最核心的代码，包括推荐方法的实现。
